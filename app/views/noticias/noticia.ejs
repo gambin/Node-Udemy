@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Portal de not�cias</title>
-		</head>
-	<body>
+<html lang="pt-br">
 
-		<h1>Not�cia</h1>
+<head>
+	<meta charset="utf-8" />
+	<title>Notícias</title>
+</head>
 
-	</body>
+<body>
+
+	<h1>Notícias</h1>
+
+	<table>
+		<tr>
+			<td>ID Notícia</td>
+			<td>Notícia</td>
+			<td>Conteudo</td>
+		</tr>	
+			<tr>
+				<td><%= noticia[0].id_noticias %> </td>
+				<td><%= noticia[0].titulo %> </td>
+				<td><%= noticia[0].noticia %> </td>
+			</tr>
+	</table>
+
+</body>
+
 </html>
