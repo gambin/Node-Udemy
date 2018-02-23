@@ -1,18 +1,10 @@
 
 module.exports = function (app) {
     app.get('/noticias', function (req, res) {
+        app.app.controllers.noticias.noticias(app, req, res);
+    });
 
-        var connection = app.config.dbConnections();
-        var noticiasModel = app.app.models.noticiasModel;
-        
-        noticiasModel.getNoticias(connection, function (error, result) {
-            if (!error) {
-                res.render('noticias/noticias', { noticias: result });
-            } else {
-                console.log(error);
-            }
-        });
-
-        
+    app.get('/noticia', function (req, res) {
+        app.app.controllers.noticias.noticia(app, req, res);        
     });
 };
